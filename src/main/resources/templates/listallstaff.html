@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>Employee Record</title>
+    <link rel="stylesheet" th:href="@{/styles.css}">
+</head>
+<body>
+<div class="container">
+    <h1>Employee Record</h1>
+    <table>
+        <thead>
+        <tr>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Phone</th>
+            <th>Department</th>
+            <th>Salary</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="employee: ${allStaff}">
+            <td th:text="${employee.staffName}"></td>
+            <td th:text="${employee.staffEmail}"></td>
+            <td th:text="${employee.staffPhone}"></td>
+            <td th:text="${employee.staffDepartment}"></td>
+            <td th:text="${employee.staffSalary}"></td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+</body>
+</html>
